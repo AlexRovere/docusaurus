@@ -1,0 +1,10 @@
+# About me
+
+Après une carrière réussie dans le secteur de la restauration, où j'ai exercé tous les postes, du service en salle à la gestion d'établissements, j'ai décidé à l'âge de 29 ans d'opérer une reconversion totale vers ma passion première : l'informatique. Fort de cette décision, j'ai suivi des stages, exploré des tutoriels, et obtenu une formation en développement informatique de niveau Bac+2 à l'AFPA.
+
+Mon premier pas dans le monde professionnel du développement a été au sein de l'équipe de Digidrive en tant que Développeur Junior. Au cours de cette expérience enrichissante, j'ai eu l'opportunité de travailler sur un projet ambitieux, le Web Apps Portal (WAP), où j'ai acquis des compétences variées allant du développement front-end et back-end à la mise en place de solutions complexes telles que la gestion des logs, des comptes utilisateurs, des accès, et des paiements récurrents.
+
+Mon rôle chez Digidrive m'a permis de participer à la conception et au déploiement d'un environnement applicatif connecté, démontrant ma capacité à m'adapter rapidement à de nouvelles technologies, à travailler en équipe et à prendre des responsabilités dans un environnement dynamique. J'ai contribué à la réalisation d'applications variées, allant de solutions ERP à des projets spécialisés comme Spoteo et Call-center.
+
+Aujourd'hui, fort de cette expérience significative, je suis prêt à relever de nouveaux défis et à apporter mes compétences à un poste de Développeur Junior/Confirmé au sein de votre entreprise. Je suis particulièrement attiré par [Nom de l'entreprise] en raison de sa réputation d'innovation et de son environnement stimulant.
+Je tiens à souligner ma disponibilité totale pour un travail en full remote, et je suis convaincu que mon bagage professionnel, ma formation solide, ainsi que ma passion pour l'informatique font de moi un candidat motivé et prêt à contribuer activement à vos projets.
