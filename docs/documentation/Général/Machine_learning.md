@@ -136,7 +136,9 @@ Permet de travailler avec les données de NumPy et Pandas
 2. MatplotLib et Seaborn pour la visualisation
 3. Scikit-Learn pour les algos de machine learning
 
-## Types de données
+## Travail sur les données
+
+### Caractériser les données
 
 1 ème caractéristique : Discrète ou Continue ?
 
@@ -184,14 +186,56 @@ Souvent plus difficile à utiliser, nécessite du travail en amont
 
 ![ML-Statistique](/img/ML-statistique.png)
 
+Il est intéressant d'étuier la répartition des valeurs avec un histogramme,
+on regroupe les valeurs en *bins*
+
+![ML-Statistique](/img/ML-statistique-1.png)
+
+On peut ensuite étudier la répartition des valeurs sur chaque colonne 
+
+![ML-Statistique](/img/ML-statistique-2.png)
+
+## Corrélation
+
+Il est possible d'étudier la corrélation entre 2 attributs : 
+
+- Compris entre 1 et -1
+- Proche de 0
+- Proche de 1 ou -1
+
+Notamment en utilisant une *heatmap*
+
+![ML-Correlation](/img/ML-correlation.png)
+
+La corrélation signifie une évolution conjointe entre 2 atrributs, elles ne sont pas forcément dépendante l'une de l'autre !
+
+On peut également d'une visualisation pour étudier chaque attribut en fonction d'un autre
+
+![ML-Correlation](/img/ML-visualisation.png)
+
+Pour bien identifier ses données il faut :
+
+- **Connaitre les caractéristiques principales**
+- **Identifier les valeurs manquantes**
+- **Identifier les valeurs anormales**
+- **Synthétiser les données**
+
+Et surtout, passer du temps sur cette étape qui est crucial pour choisir son algo
 
 ## Nettoyage des données
+
+**Garbage in = Garbage out**
+
+Des données de qualité permettent de **résoudre** la tache et **réprésentent** le phénomène que l'ont veut **modéliser**
 
 Les critères pour évaluer la qualité des donnéees : 
 
 ![ML-Nettoyage](/img/ML-nettoyage.png)
 
 Un temps considérable est alloué au nettoyage des données (entre 60 et 80 % du temps)
+
+![ML-anomalie](/img/ML-anomalie-1.png)
+
 
 
 ## Anomalies
@@ -220,6 +264,50 @@ Résultat : Score de probabilité 1 (ou 100 %) : risque d'anomalie
 
 ![ML-isolation](/img/ML-isolation-forest.png)
 
+## Données manquantes
+
+1. Comprendre la raison : 
+
+- Données non collectées ? 
+- Données non applicables ?
+
+2. Pallier au manque de données : 
+
+- Supprimer les lignes avec des valeurs manquantes
+- Supprimer les colonnes avec trop de valeurs manquantes
+- Remplacer une valeur par une moyenne ou autre (tag inconnu)
+- Développer un modèle d'imputation de données manquantes
+
+```
+// Possibilité d'ajouté le nom de la colonne en paramètre
+
+// Supprimer toutes les lignes avec données manquantes
+dt.dropna(axis=0)
+
+// Supprimer toutes colonnes avec des données manquantes
+dt.dropna(axis=1)
+```
+
+## Préparer les données
+
+Les algos d'apprentissages utilisent principalement des matrices au format numérique
+
+Il faut donc par exemple *encoder* une image en vecteur numérique.
+
+Plusieurs techniques pour encoder un texte : 
+
+- Bag-of-word -> compter le nombre d'occurence de chaque mot
+- Word embedding -> réprésente chaque mot comme un vecteur
+
+![ML-prepare](/img/ML-prepare.png)
+
+### Gérer les données catégorielles
+
+Il faut utiliser l'encodage one-hot car il ne serait pas pertinent de donner un id à ces élements non comparables
+
+![ML-encodage](/img/ML-encodage.png)
+
+
 
 ## Apprentissage
 
@@ -234,7 +322,7 @@ Pour l'apprentissage supervisé, il faut 3 éléments :
 
 1. Des données : x les données en entrée, y les labels correspondant à ces données
 2. Un modèle construit sur ces données : f(x): fait correspondre une entrée à un label
-3. Une métrique d'évaluation du modèle : d(x,f(x)) : évalue l'écart entre les prédictions du modèle à la réalité
+3. Une métrique d'évaluation du modèle : d(y,f(x)) : évalue l'écart entre les prédictions du modèle à la réalité
 
 ### Apprentissage non supervisé
 
@@ -254,3 +342,9 @@ Le surapprentissage (overfitting) est un odèle devenu trop complexe
 et ne réprésente pas fidèlement le phénomère réel
 
 ![ML-surapprentissage](/img/ML-surapprentissage.png)
+
+Pour controler le surapprentissage on distingue les données : 
+
+- Données entrainement (80%)
+- Données de test (20%)
+
