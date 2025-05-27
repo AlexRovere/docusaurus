@@ -138,10 +138,11 @@ Dict - Dictionnaire
 
 C'est l'équivalent d'un objet JS (collection clé/valeur)
 
+```
 object = {}
 object = dict()
 object = {name: "rovere"}
-
+```
 Tuple
 
 Une liste de valeur immuable
@@ -159,3 +160,44 @@ liste = [1, 2, 'hey']
 - print(value) : log dans la console
 - type(value) : log le type
 - lambda : lambda arg1, arg2, ... : result : fonction courte qui traite les données
+
+Pkusieurs types de chaine de caractères : 
+
+- str // par defaut
+- unicode // encodage selon la norme unicode
+
+Méthode de str : 
+
+- lower, upper, capitalize, title, swapcase
+- len, count, index, find, replace
+- startswith, endswith
+- strip, split, format
+- isalpha, isdigit
+
+Découper une chaine : 
+
+msg = "hello world"
+msg[0:4] = "hell"
+msg[:5] = "hello"
+msg[6:] = "world"
+msg[:-6] = "hello"
+
+3ème paramètre
+msg[start:end:step=1]
+
+msg[::2] = "hl wrd"
+
+## Ternaires
+
+"ok" if True else "not ok"
+
+## Class
+
+3 types de méthodes : 
+
+- Instance : avec self en premier paramètre (self) @staticmethod
+- classe : avec la classe en premier paramètre (cls) @classmethod
+- statique : sur la classe ou une instance
+
+statique = au sein de la classe qui n'utilise aucune propriété de l'instance ou de la classe
+
