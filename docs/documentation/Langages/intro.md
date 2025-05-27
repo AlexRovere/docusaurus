@@ -16,3 +16,5 @@ sidebar_position: 1
 - [Java - Springboot](https://alexrovere.github.io/alex-docs/docs/documentation/Langages/JAVA-Spring_boot)
 - [Kotlin](https://alexrovere.github.io/alex-docs/docs/documentation/Langages/Kotlin)
 - [Flutter](https://alexrovere.github.io/alex-docs/docs/documentation/Langages/Flutter)
+- [Python](https://alexrovere.github.io/alex-docs/docs/documentation/Langages/Python)
+
